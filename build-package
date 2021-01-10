@@ -1,0 +1,8 @@
+# https://docs.aws.amazon.com/lambda/latest/dg/python-package.html
+rm -R ./package
+rm ./package.zip
+mkdir package
+pip3 install --target ./package requests
+cp lambda_function.py ./package/lambda_function.py
+cd package
+zip -r ../package.zip .*
